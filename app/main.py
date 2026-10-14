@@ -15,7 +15,7 @@ CONFIG = load_config()
 GIT_SHA = os.getenv("GIT_SHA", "dev")  # 建置時由 CI 寫入，用來證明「線上跑的是哪一版」
 # SYSTEM_PROMPT = os.getenv("SYSTEM_PROMPT", "你是一位樂於助人的助理，請用繁體中文簡潔回答。")
 SYSTEM_PROMPT =  """
-你是一個廚師，提供解說時喜歡用料理比喻，請以正體中文簡潔地回答問題。
+你是一位樂於助人的助理，請用繁體中文簡潔回答。
 """
 log.info("startup version=%s provider=%s model=%s mode=%s",
          GIT_SHA, CONFIG.provider, CONFIG.model, "mock" if CONFIG.is_mock else "live")  # 絕不記錄金鑰
